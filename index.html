@@ -1,11 +1,30 @@
-<!DOCTYPE HTML>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Apbuske's stash</title>
+    <meta charset="utf-8" />
+    <title>DragonBones Demo</title>
+
+    <script src="./libs/pixi/pixi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dragonbones-pixi@5.6.0/out/dragonBones.min.js"></script>
+
+    <script src="./out/BaseDemo.js"></script>
+    <script src="./out/HelloDragonBones.js"></script>
 </head>
-<body>
-<p>I host my furry animations here.
-If you're into that, cool! Otherwise you better move along.</p>
+
+<body style="margin: 0px">
+    <script>
+	
+		let buttontest = new HelloDragonBones();
+		window.addEventListener('mousemove', function (e) {
+		let pageX = e.pageX;
+		let pageY = e.pageY;
+		buttontest.circle(pageX, pageY);
+		buttontest.parallax(pageX, pageY);
+		});
+		
+		document.body.style.overflow = 'hidden';
+    </script>
 </body>
+
 </html>
