@@ -23,8 +23,8 @@
 		buttontest.parallax(pageX, pageY);
 		});
 		window.addEventListener('touchmove', function (e) {
-		let pageX = e.pageX;
-		let pageY = e.pageY;
+		let pageX = e.touches[0].clientX;
+		let pageY = e.touches[0].clientY;
 		buttontest.circle(pageX, pageY);
 		buttontest.parallax(pageX, pageY);
 		});
