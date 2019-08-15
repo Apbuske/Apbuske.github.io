@@ -22,6 +22,12 @@
 		buttontest.circle(pageX, pageY);
 		buttontest.parallax(pageX, pageY);
 		});
+		window.addEventListener('touchmove', function (e) {
+		let pageX = e.pageX;
+		let pageY = e.pageY;
+		buttontest.circle(pageX, pageY);
+		buttontest.parallax(pageX, pageY);
+		});
 		
 		document.body.style.overflow = 'hidden';
     </script>
